@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Tarjetas</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="app-body">
+    <div class="app-container">
+        <header class="page-header">
+            <a href="dashboard.html" class="back-arrow"><i class="fa-solid fa-arrow-left"></i></a>
+            <h1 class="page-title">Mis Tarjetas</h1>
+        </header>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-chip"></div>
+                    <div id="card-type-logo" class="card-logo"></div>
+                    <div id="preview-card-number" class="card-number">#### #### #### ####</div>
+                    <div class="card-footer">
+                        <span id="preview-card-holder">NOMBRE APELLIDO</span>
+                        <span id="preview-expiry-date">MM/AA</span>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <div class="card-stripe"></div>
+                    <div class="card-cvc-box">
+                        <span id="preview-cvc">CVV</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="add-card-form-container">
+            <form id="add-card-form" class="app-form">
+                <div class="input-group">
+                    <label for="card-number">Número de la Tarjeta</label>
+                    <input type="text" id="card-number" required placeholder="4242 4242 4242 4242" maxlength="19">
+                </div>
+                <div class="input-group">
+                    <label for="card-holder">Nombre del Titular</label>
+                    <input type="text" id="card-holder" required>
+                </div>
+                <div class="input-group-row" style="display: flex; gap: 15px;">
+                    <div class="input-group" style="flex: 1;">
+                        <label for="expiry-date">Expira (MM/AA)</label>
+                        <input type="text" id="expiry-date" placeholder="MM/AA" required maxlength="5">
+                    </div>
+                    <div class="input-group" style="flex: 1;">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" required maxlength="4">
+                    </div>
+                </div>
+                <div class="form-actions" style="margin-top: 20px;">
+                    <button type="submit" class="btn">Guardar Tarjeta</button>
+                </div>
+            </form>
+        </div>
+        
+        <hr style="border-color: var(--border-color); margin: 20px 0;">
+        <div id="cards-list"></div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
+        <a href="transfer.html" class="nav-item"><i class="fa-solid fa-paper-plane"></i><span>Transferir</span></a>
+        <a href="cards.html" class="nav-item active"><i class="fa-solid fa-credit-card"></i><span>Tarjetas</span></a>
+        <a href="history.html" class="nav-item"><i class="fa-solid fa-receipt"></i><span>Historial</span></a>
+    </nav>
+    <script src="JS/main.js"></script>
+</body>
+</html>

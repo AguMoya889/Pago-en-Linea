@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobante de Transacción – Pago en Línea</title>
+
+    <!-- Estilos generales de la app -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Iconos y tipografía -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="app-body">
+    <div class="app-container">
+        <!-- HEADER -->
+        <header class="page-header">
+            <a href="history.html" class="back-arrow">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1 class="page-title">Comprobante de Transacción</h1>
+        </header>
+
+        <!-- TARJETA DEL COMPROBANTE -->
+        <section id="receipt-details" class="receipt-card">
+            <div class="receipt-header">
+                <h2>Pago en Línea</h2>
+                <span class="receipt-status received">Pago exitoso</span>
+            </div>
+
+            <div class="receipt-amount-wrapper">
+                <p class="receipt-label-main">Monto transferido</p>
+                <p id="receipt-amount" class="receipt-amount">$0</p>
+            </div>
+
+            <div class="receipt-row">
+                <span class="receipt-label">ID de transacción</span>
+                <span id="receipt-id" class="receipt-value">—</span>
+            </div>
+
+            <div class="receipt-row">
+                <span class="receipt-label">Fecha y hora</span>
+                <span id="receipt-date" class="receipt-value">—</span>
+            </div>
+
+            <div class="receipt-row">
+                <span class="receipt-label">Descripción</span>
+                <span id="receipt-description" class="receipt-value">
+                    Transferencia realizada desde Pago en Línea
+                </span>
+            </div>
+
+            <div class="receipt-footer">
+                <p>Este comprobante ha sido generado automáticamente por la plataforma Pago en Línea.</p>
+            </div>
+        </section>
+
+        <!-- BOTÓN IMPRIMIR / PDF -->
+        <div class="receipt-actions">
+            <button id="print-receipt-btn" class="btn">
+                Imprimir / Guardar como PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- JS de la app -->
+    <script src="JS/main.js"></script>
+    <script src="JS/receipt.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

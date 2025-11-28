@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación en dos pasos | Pago en Línea</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="form-title">Verificación en dos pasos</h1>
+            <p class="form-subtitle">
+                Ingresa el código de verificación enviado a tu correo.
+                <br>
+                <small>(Para la prueba, el código es <strong>123456</strong>).</small>
+            </p>
+
+            <form id="twofactor-form">
+                <div class="input-group">
+                    <label for="code">Código de verificación</label>
+                    <input
+                        type="text"
+                        id="code"
+                        name="code"
+                        maxlength="6"
+                        placeholder="••••••"
+                        required
+                    >
+                    <small class="error-message" id="code-error"></small>
+                </div>
+
+                <button type="submit" class="btn">Confirmar código</button>
+            </form>
+
+            <p class="security-note">
+                <small>No compartas este código con nadie.</small>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/twofactor.js"></script>
+</body>
+</html>
