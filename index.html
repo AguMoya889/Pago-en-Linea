@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión – Pago en Línea</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="form-title">Bienvenido a Pago en Línea</h1>
+            <p class="form-subtitle">
+                Ingresa para revisar tus movimientos, tarjetas y pagos pendientes.
+            </p>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tu@correo.com"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="••••••••"
+                        required
+                    >
+                </div>
+
+                <div class="input-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="remember-me">
+                        Mantener sesión iniciada en este dispositivo
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Acceder a mi cuenta</button>
+            </form>
+
+            <div class="forgot-password">
+                <!-- Enlaza a la página de recuperación de contraseña -->
+                <a href="reset-password.html">¿Olvidaste tu contraseña?</a>
+            </div>
+            
+            <div class="switch-form">
+                <p>¿Aún no tienes cuenta? <a href="register.html">Crea tu cuenta aquí</a></p>
+            </div>
+
+            <p class="security-note">
+                <small>Por seguridad, nunca compartas tu contraseña ni tus códigos de verificación.</small>
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts al final para que no bloqueen el render -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/api.js"></script>
+
+    <!-- 👇 ESTA LÍNEA FALTABA: maneja el submit del login -->
+    <script src="js/login.js"></script>
+
+    <script src="js/auth-backend.js"></script>
+</body>
+</html>

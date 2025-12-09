@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de pagos | Pago en Línea</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="app-body">
+
+    <div class="app-container">
+        <header class="header">
+            <div>
+                <p class="welcome-text">Historial</p>
+                <h1 class="username">Pagos y transferencias</h1>
+            </div>
+            <a href="dashboard.html" class="profile-icon">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </header>
+
+        <section class="page-section">
+            <p class="form-subtitle">
+                Aquí puedes revisar los pagos y transferencias que has realizado en Pago en Línea.
+            </p>
+
+            <table class="table-history">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th>Monto</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="transactions-body">
+                    <!-- Se rellena con JS -->
+                </tbody>
+            </table>
+
+            <p id="no-data-message" class="security-note" style="display:none;">
+                <small>No se encontraron transacciones registradas.</small>
+            </p>
+        </section>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="transfer.html" class="nav-item">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Transferir</span>
+        </a>
+        <a href="cards.html" class="nav-item">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Tarjetas</span>
+        </a>
+        <a href="history.html" class="nav-item active">
+            <i class="fa-solid fa-receipt"></i>
+            <span>Historial</span>
+        </a>
+        <a href="faq.html" class="nav-item">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Ayuda</span>
+        </a>
+    </nav>
+
+    <!-- Solo cargamos el JS correcto -->
+    <script src="js/history.js"></script>
+</body>
+</html>

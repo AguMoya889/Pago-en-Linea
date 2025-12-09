@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Pago en Línea</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="app-body">
+
+    <div class="app-container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div>
+                <p class="welcome-text">Hola,</p>
+                <h1 id="user-fullname" class="username">Usuario</h1>
+            </div>
+            <a href="profile.html" class="profile-icon">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </header>
+
+        <!-- SALDO -->
+        <section class="balance-card">
+            <p>Saldo Disponible</p>
+            <h2 id="user-balance">$0</h2>
+        </section>
+
+        <!-- ACCIONES RÁPIDAS -->
+        <section class="page-section">
+            <div class="actions-grid">
+                <a href="transfer.html" class="action-card">
+                    <div class="action-icon">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    <p>Enviar Dinero</p>
+                </a>
+
+                <a href="cards.html" class="action-card">
+                    <div class="action-icon">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <p>Mis Tarjetas</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- MOVIMIENTOS -->
+        <section class="page-section">
+            <div class="section-header">
+                <h3>Movimientos Recientes</h3>
+                <a href="history.html" class="see-all-link">Ver todo</a>
+            </div>
+
+            <div id="movements-list" class="movements-list"></div>
+        </section>
+
+    </div>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bottom-nav">
+
+        <a href="dashboard.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+
+        <a href="transfer.html" class="nav-item">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Transferir</span>
+        </a>
+
+        <a href="cards.html" class="nav-item">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>Tarjetas</span>
+        </a>
+
+        <a href="history.html" class="nav-item">
+            <i class="fa-solid fa-receipt"></i>
+            <span>Historial</span>
+        </a>
+
+        <!-- 🔥 BOTÓN NUEVO: AYUDA / PREGUNTAS FRECUENTES -->
+        <a href="faq.html" class="nav-item">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Ayuda</span>
+        </a>
+
+    </nav>
+
+    <!-- SCRIPTS (OJO: JS mayúscula) -->
+    <script src="JS/main.js"></script>
+    <script src="JS/dashboard.js"></script>
+    <script src="js/api.js"></script>
+
+</body>
+</html>
